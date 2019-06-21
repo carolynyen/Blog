@@ -1,0 +1,16 @@
+<div *ngIf="post">
+<label for="title">Title</label>
+<br>
+<input type="text" style="height: 1rem; width: 15rem;" placeholder="Add title" [(ngModel)]="post.title" (ngModelChange)="handleChange()"/>
+<br>
+<label for="body">Body</label>
+<br>
+<textarea style="height: 10rem; width: 15rem;" placeholder="Add body" [(ngModel)]="post.body" (ngModelChange)="handleChange()">
+</textarea>
+<br>
+	Last Modified: {{post.modified | date: 'long'}}
+<br>
+<button type="button" (click)="save()">Save</button>&nbsp;
+<button type="button" (click)="preview()">Preview</button>&nbsp;
+<button type="button" (click)="delete()">Delete</button>
+</div>

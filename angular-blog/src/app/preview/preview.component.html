@@ -1,0 +1,5 @@
+<div *ngIf="post">
+    <div><button class="edit_button" (click)="edit()">Edit</button></div>
+    <div [innerHTML]="title_html"></div>
+    <div [innerHTML]="body_html"></div>
+</div>

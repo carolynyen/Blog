@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog Posts</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Blog</h1>
+    <p>Welcome, <%= username %>!</p>
+    <table class="table">
+			<thead>
+				<tr>
+					<th>Postid</th>
+					<th>Title</th>
+					<th>Created</th>
+					<th>Modified</th>
+					<th>Body</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% for (let post of posts) { %>
+					<tr>
+						<td> <%= post.postid %> </td>
+						<td> <%- post.title %> </td>
+						<td> <%= new Date(post.created).toLocaleString() %> </td>
+						<td> <%= new Date(post.modified).toLocaleString() %> </td>
+						<td> <%- post.body %> </td>
+					</tr>
+				<% } %>
+			</tbody>
+		</table>
+        <% if ( next != null ) { %>
+			<a href='<%= next %>' id ="next">Next</a>
+        <br>
+        <% } %>
+        <% if ( home != null ) { %>
+	    <a href='<%= home %>' id ="home">Home</a>
+        <% } %>
+  </body>
+</html>

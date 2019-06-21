@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.table, th, td, tr {
+    border: 1px solid black;
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table {
+    margin: 10px 0px 10px 0px;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #6495ED;
+    color: white;
+}
+
+th, td, tr {
+    padding: 10px;
+}
